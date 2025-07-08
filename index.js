@@ -11,7 +11,7 @@ app.post("/frete", async (req, res) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": "Bearer SEU_TOKEN_AQUI"
+        "Authorization": "Bearer ${process.env.FRETE_TOKEN}"  
       },
       body: JSON.stringify({
         from: cep_origem,
